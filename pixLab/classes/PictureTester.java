@@ -17,6 +17,73 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testMyCollage()
+  {
+   Picture a = new Picture("beach.jpg");
+   Picture b = new Picture("butterfly1.jpg");
+   Picture c = new Picture("arch.jpg");
+   c.myCollage(a, c, b);
+   c.explore();
+  }
+  
+  public static void testCopy()
+  {
+    Picture p = new Picture("blue-mark.jpg");
+    Picture k = new Picture("beach.jpg");
+    p.explore();
+    p.copy(k, 0, 25, 50, 50, 70, 90);
+    p.explore();
+  }
+  
+  public static void testMirrorArms()
+  {
+    Picture p = new Picture("snowman.jpg");
+    p.explore();
+    p.mirrorArms();
+    p.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+    Picture p = new Picture("seagull.jpg");
+    p.explore();
+    p.mirrorGull();
+    p.explore();
+  }
+  
+  public static void testSeeFish()
+  {
+    Picture p = new Picture("water.jpg");
+    p.explore();
+    p.seeFish();
+    p.explore();
+  }
+  
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+  
+  public static void testNegate()
+  {
+    Picture p = new Picture("pic Halloween.jpg");
+    p.explore();
+    p.negate();
+    p.explore();
+  }
+  
+
+  
+  public static void testGrayscale()
+  {
+    Picture k = new Picture("pic Halloween.jpg");
+    k.explore();
+    k.grayscale();
+    k.explore();
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -51,6 +118,26 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture p = new Picture("pic Halloween.jpg");
+    p.mirrorVerticalRightToLeft();
+    p.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+    Picture p = new Picture("pic Halloween.jpg");
+    p.mirrorHorizontal();
+    p.explore();
+  }
+  
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture p = new Picture("pic Halloween.jpg");
+    p.mirrorHorizontalBotToTop();
+    p.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,7 +145,8 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testMirrorVerticalRightToLeft();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -80,5 +168,11 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+    //testSeeFish();
+    //testMirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
+    //testMirrorGull();
+    //testCopy();
+    testMyCollage();
   }
 }
